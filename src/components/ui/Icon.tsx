@@ -1,9 +1,7 @@
 import {
   TruckIcon,
   WrenchScrewdriverIcon,
-  RulerIcon,
   ShieldCheckIcon,
-  HeadphonesIcon,
   HomeModernIcon,
   CheckBadgeIcon,
   SparklesIcon,
@@ -22,6 +20,8 @@ import {
   UserGroupIcon,
   BuildingOffice2Icon,
   SunIcon,
+  ChatBubbleLeftRightIcon,
+  Square3Stack3DIcon,
 } from '@heroicons/react/24/outline';
 
 import { StarIcon as StarSolidIcon } from '@heroicons/react/24/solid';
@@ -29,9 +29,9 @@ import { StarIcon as StarSolidIcon } from '@heroicons/react/24/solid';
 const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
   truck: TruckIcon,
   tools: WrenchScrewdriverIcon,
-  ruler: RulerIcon,
+  ruler: Square3Stack3DIcon,
   shield: ShieldCheckIcon,
-  headset: HeadphonesIcon,
+  headset: ChatBubbleLeftRightIcon,
   home: HomeModernIcon,
   check: CheckBadgeIcon,
   sparkles: SparklesIcon,
@@ -53,7 +53,7 @@ const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>
   sun: SunIcon,
   projects: CheckBadgeIcon,
   warranty: ShieldCheckIcon,
-  advice: HeadphonesIcon,
+  advice: ChatBubbleLeftRightIcon,
   team: UserGroupIcon,
 };
 
