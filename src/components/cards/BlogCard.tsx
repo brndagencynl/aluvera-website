@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Icon } from '@/components/ui';
 
 interface BlogCardProps {
@@ -10,15 +11,19 @@ interface BlogCardProps {
   category: string;
 }
 
-export function BlogCard({ title, excerpt, date, slug, category }: BlogCardProps) {
+export function BlogCard({ title, excerpt, image, date, slug, category }: BlogCardProps) {
   return (
     <Link href={`/blog/${slug}`} className="group block h-full">
       <article className="bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-emerald-300 hover:shadow-xl transition-all duration-300 h-full flex flex-col card-hover">
         {/* Image */}
         <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
-            <span className="text-slate-400 text-sm">Blog afbeelding</span>
-          </div>
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
           {/* Category badge */}
           <div className="absolute top-4 left-4">
             <span className="bg-emerald-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-lg">

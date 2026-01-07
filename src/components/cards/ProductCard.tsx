@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Icon } from '@/components/ui';
 
 interface ProductCardProps {
@@ -15,9 +16,13 @@ export function ProductCard({ title, description, image, slug, features }: Produ
       <article className="bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-emerald-300 hover:shadow-xl transition-all duration-300 h-full flex flex-col card-hover">
         {/* Image */}
         <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 to-slate-200 flex items-center justify-center">
-            <span className="text-slate-400 text-sm">{title}</span>
-          </div>
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
           {/* Hover overlay */}
           <div className="absolute inset-0 bg-emerald-600/0 group-hover:bg-emerald-600/10 transition-colors duration-300" />
           {/* Plus icon on hover */}

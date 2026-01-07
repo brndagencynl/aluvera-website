@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Icon } from '@/components/ui';
 import { Project } from '@/data/projects';
 
@@ -12,9 +13,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <article className="bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-emerald-300 hover:shadow-xl transition-all duration-300 h-full card-hover">
         {/* Image */}
         <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 to-slate-200 flex items-center justify-center">
-            <span className="text-slate-400 text-sm">Project: {project.title}</span>
-          </div>
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
           
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />

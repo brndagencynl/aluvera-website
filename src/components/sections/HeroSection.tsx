@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Container, Button, Icon } from '@/components/ui';
 import { companyInfo } from '@/data/company';
 
@@ -6,8 +7,15 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center bg-slate-900 overflow-hidden">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0">
-        {/* Placeholder for background image */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900" />
+        {/* Background image */}
+        <Image
+          src="/mock/hero-1.jpg"
+          alt="Moderne aluminium veranda"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
         {/* Pattern overlay */}
         <div className="absolute inset-0 opacity-5 bg-grid-pattern" />
         {/* Gradient overlay */}

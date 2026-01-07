@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Container, Section, Button, Icon } from '@/components/ui';
 
 const highlights = [
@@ -16,9 +17,15 @@ export function CraftsmanshipSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image side */}
           <div className="relative">
-            {/* Main image placeholder */}
-            <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-emerald-100 to-slate-200 flex items-center justify-center overflow-hidden shadow-xl">
-              <span className="text-slate-400">Foto: Vakmanschap in werkplaats</span>
+            {/* Main image */}
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl relative">
+              <Image
+                src="/mock/craftsmanship-1.jpg"
+                alt="Vakmanschap in onze werkplaats"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
             
             {/* Floating stat card */}
