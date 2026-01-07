@@ -229,7 +229,7 @@ export default function ServicePage() {
 
       {/* FAQ */}
       <Section background="white" id="faq">
-        <Container size="narrow">
+        <Container size="sm">
           <SectionHeader
             title="Veelgestelde vragen"
             subtitle="Heeft u een vraag? Wellicht staat het antwoord hier. Anders kunt u altijd contact opnemen."

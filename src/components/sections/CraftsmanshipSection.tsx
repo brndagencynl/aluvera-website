@@ -1,4 +1,4 @@
-import { Container, Section, Icon } from '@/components/ui';
+import { Container, Section, Button, Icon } from '@/components/ui';
 
 const highlights = [
   "Eigen werkplaats in Helmond",
@@ -11,36 +11,40 @@ const highlights = [
 
 export function CraftsmanshipSection() {
   return (
-    <Section background="white" id="vakmanschap">
-      <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image placeholder */}
+    <Section background="white" id="vakmanschap" spacing="lg">
+      <Container size="lg">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Image side */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-emerald-100 to-slate-100 flex items-center justify-center overflow-hidden">
+            {/* Main image placeholder */}
+            <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-emerald-100 to-slate-200 flex items-center justify-center overflow-hidden shadow-xl">
               <span className="text-slate-400">Foto: Vakmanschap in werkplaats</span>
             </div>
-            {/* Decorative card */}
-            <div className="absolute -bottom-6 -right-6 bg-emerald-600 text-white p-6 rounded-2xl shadow-xl hidden md:block">
-              <div className="text-4xl font-bold">15+</div>
+            
+            {/* Floating stat card */}
+            <div className="absolute -bottom-8 -right-4 md:-right-8 bg-emerald-600 text-white p-6 rounded-xl shadow-2xl">
+              <div className="text-5xl font-bold mb-1">15+</div>
               <div className="text-emerald-100">jaar ervaring</div>
             </div>
+
+            {/* Decorative element */}
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-emerald-100 rounded-xl -z-10" />
           </div>
 
-          {/* Content */}
-          <div>
-            <div className="inline-flex items-center bg-emerald-50 text-emerald-700 rounded-full px-4 py-2 text-sm font-medium mb-4">
-              <Icon name="sparkles" size="sm" className="mr-2" />
-              Ons verhaal
-            </div>
+          {/* Content side */}
+          <div className="lg:pl-8">
+            <span className="inline-block text-sm font-semibold tracking-wider uppercase mb-3 text-emerald-600">
+              Nederlands vakmanschap
+            </span>
             
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
               Vakmanschap uit Helmond
             </h2>
             
             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
               Al meer dan 15 jaar zijn wij gespecialiseerd in het ontwerpen en bouwen van 
-              hoogwaardige aluminium veranda's. Vanuit onze werkplaats in Helmond leveren 
-              we maatwerk waar u jarenlang plezier van heeft.
+              hoogwaardige aluminium veranda&apos;s. Vanuit onze eigen werkplaats in Helmond 
+              leveren we maatwerk waar u jarenlang plezier van heeft.
             </p>
             
             <p className="text-slate-600 mb-8 leading-relaxed">
@@ -49,13 +53,27 @@ export function CraftsmanshipSection() {
               compromissen. Onze eigen monteurs zorgen voor een vlekkeloze installatie.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {/* Highlights grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mb-8">
               {highlights.map((item, index) => (
                 <div key={index} className="flex items-center">
-                  <Icon name="check" size="sm" className="text-emerald-600 mr-3 flex-shrink-0" />
-                  <span className="text-slate-700">{item}</span>
+                  <div className="w-5 h-5 bg-emerald-100 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                    <Icon name="check" size="sm" className="text-emerald-600 w-3 h-3" />
+                  </div>
+                  <span className="text-slate-700 font-medium">{item}</span>
                 </div>
               ))}
+            </div>
+
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button href="/service" size="md">
+                Alles over Aluvera
+                <Icon name="arrow" size="sm" className="ml-2" />
+              </Button>
+              <Button href="/projecten" variant="ghost" size="md">
+                Bekijk onze projecten
+              </Button>
             </div>
           </div>
         </div>

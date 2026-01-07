@@ -1,14 +1,17 @@
 interface ContainerProps {
   children: React.ReactNode;
   className?: string;
-  size?: 'default' | 'narrow' | 'wide';
+  size?: 'xs' | 'sm' | 'default' | 'lg' | 'wide' | 'full';
 }
 
 export function Container({ children, className = '', size = 'default' }: ContainerProps) {
   const sizes = {
-    narrow: 'max-w-4xl',
-    default: 'max-w-7xl',
-    wide: 'max-w-screen-2xl',
+    xs: 'max-w-2xl',
+    sm: 'max-w-4xl',
+    default: 'max-w-6xl',
+    lg: 'max-w-7xl',
+    wide: 'max-w-[1400px]',
+    full: 'max-w-full',
   };
 
   return (

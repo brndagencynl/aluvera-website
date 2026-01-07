@@ -63,7 +63,7 @@ export default function RootLayout({
     <html lang="nl" className={inter.variable}>
       <body className="font-sans antialiased bg-white text-slate-900">
         <Navbar />
-        <main className="pt-20 md:pt-28">
+        <main>
           {children}
         </main>
         <Footer />

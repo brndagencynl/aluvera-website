@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "mock:images": "node scripts/download-mock-images.mjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
