@@ -1,6 +1,6 @@
 import {
   HeroSection,
-  ProductsSection,
+  CategoriesCarousel,
   USPSection,
   CraftsmanshipSection,
   ProjectsSection,
@@ -15,8 +15,8 @@ export default function Home() {
       {/* Hero - Main value proposition */}
       <HeroSection />
       
-      {/* Products - Show main offerings */}
-      <ProductsSection />
+      {/* Categories - Show main product categories */}
+      <CategoriesCarousel />
       
       {/* USP/Zekerheden - Why choose Aluvera */}
       <USPSection />

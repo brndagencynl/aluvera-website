@@ -1,5 +1,6 @@
 export { HeroSection } from './HeroSection';
 export { ProductsSection } from './ProductsSection';
+export { CategoriesCarousel } from './CategoriesCarousel';
 export { USPSection } from './USPSection';
 export { CraftsmanshipSection } from './CraftsmanshipSection';
 export { ProjectsSection } from './ProjectsSection';

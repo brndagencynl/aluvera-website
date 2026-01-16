@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Container, Button, Icon } from '@/components/ui';
 import { navigation, companyInfo } from '@/data/company';
@@ -70,13 +71,14 @@ export function Navbar() {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 bg-emerald-600 rounded-lg flex items-center justify-center group-hover:bg-emerald-700 transition-colors">
-              <span className="text-white font-bold text-xl">A</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold text-slate-900 leading-tight">Aluvera</span>
-              <span className="text-xs text-slate-500 hidden sm:block">Aluminium Veranda&apos;s</span>
-            </div>
+            <Image
+              src="/AluVera-logo-def.png"
+              alt="Aluvera"
+              width={220}
+              height={64}
+              priority
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop navigation */}

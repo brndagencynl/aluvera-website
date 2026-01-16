@@ -57,19 +57,20 @@ export const companyInfo = {
 export const navigation = {
   main: [
     { label: "Home", href: "/" },
+    { label: "Producten", href: "/producten" },
     { label: "Veranda's", href: "/verandas" },
     { label: "Projecten", href: "/projecten" },
     { label: "Service", href: "/service" },
-    { label: "Configurator", href: "/configurator" },
     { label: "Contact", href: "/contact" }
   ],
   footer: {
     products: [
-      { label: "Aluminium Veranda's", href: "/verandas" },
-      { label: "Glazen Overkappingen", href: "/verandas#overkappingen" },
-      { label: "Schuifwanden", href: "/verandas#schuifwanden" },
-      { label: "Zonwering", href: "/verandas#zonwering" },
-      { label: "Maatwerk", href: "/verandas#maatwerk" }
+      { label: "Alle Producten", href: "/producten" },
+      { label: "Klassieke Veranda's", href: "/producten/klassieke-veranda" },
+      { label: "Moderne Veranda's", href: "/producten/moderne-veranda" },
+      { label: "Glazen Overkappingen", href: "/producten/glazen-overkapping" },
+      { label: "Schuifwanden", href: "/producten/schuifwanden" },
+      { label: "Zonwering", href: "/producten/zonwering" }
     ],
     service: [
       { label: "Werkwijze", href: "/service#werkwijze" },

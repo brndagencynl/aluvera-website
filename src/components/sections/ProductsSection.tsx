@@ -17,10 +17,10 @@ export function ProductsSection() {
             <ProductCard
               key={product.id}
               title={product.title}
-              description={product.description}
-              image={product.image}
+              description={product.shortDescription}
+              image={product.heroImage}
               slug={product.slug}
-              features={product.features}
+              features={product.highlights.slice(0, 3)}
             />
           ))}
         </div>
@@ -36,8 +36,8 @@ export function ProductsSection() {
               Afspraak maken
               <Icon name="arrow" size="sm" className="ml-2" />
             </Button>
-            <Button href="/verandas" variant="outline" size="md">
-              Meer informatie
+            <Button href="/producten" variant="outline" size="md">
+              Alle producten
             </Button>
           </div>
         </div>

@@ -16,7 +16,7 @@ export default function VerandasPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-slate-900 to-emerald-900 py-20 md:py-28">
+      <section className="bg-gradient-to-br from-slate-900 to-emerald-900 pt-32 pb-20 md:pt-40 md:pb-28">
         <Container>
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -106,21 +106,21 @@ export default function VerandasPage() {
                     {product.title}
                   </h3>
                   <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                    {product.description}
+                    {product.shortDescription}
                   </p>
                   
                   <h4 className="font-semibold text-slate-900 mb-3">Kenmerken:</h4>
                   <ul className="space-y-2 mb-6">
-                    {product.features.map((feature, i) => (
+                    {product.highlights.slice(0, 4).map((highlight, i) => (
                       <li key={i} className="flex items-center text-slate-600">
                         <Icon name="check" size="sm" className="text-emerald-600 mr-3 flex-shrink-0" />
-                        {feature}
+                        {highlight}
                       </li>
                     ))}
                   </ul>
                   
-                  <Button href="/contact">
-                    Vraag informatie aan
+                  <Button href={`/producten/${product.slug}`}>
+                    Bekijk product
                     <Icon name="arrow" size="sm" className="ml-2" />
                   </Button>
                 </div>

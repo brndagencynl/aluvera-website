@@ -12,7 +12,7 @@ interface ProductCardProps {
 
 export function ProductCard({ title, description, image, slug, features }: ProductCardProps) {
   return (
-    <Link href={`/verandas#${slug}`} className="group block h-full">
+    <Link href={`/producten/${slug}`} className="group block h-full">
       <article className="bg-white rounded-xl overflow-hidden border border-slate-200 hover:border-emerald-300 hover:shadow-xl transition-all duration-300 h-full flex flex-col card-hover">
         {/* Image */}
         <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
